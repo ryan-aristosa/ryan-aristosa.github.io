@@ -1,0 +1,150 @@
+$color-earthborn-bugle: #F7F7F7;
+$color-dark-cyan-blue: #373D48;
+
+nav {
+	background-color: $color-dark-cyan-blue;
+	box-shadow: 0 3px 20px rgba(0, 0, 0, 0.2);
+	height: 64px;
+	z-index: 1;
+
+	.header-container {
+		height: 100%;
+		width: 100%;
+		max-width: 1200px;
+		margin: 0 auto;
+
+		.logo-container {
+			height: 100%;
+			padding: 9px;
+
+			img {
+				animation: rotate 1s;
+			}
+			 
+			@keyframes rotate {
+				from {
+					transform: rotate(0deg);
+				}
+
+				to {
+					transform: rotate(360deg);
+				}
+			}
+		}
+
+		.hamburger {
+			display: none;
+
+			div {
+				background: $color-earthborn-bugle;
+				height: 3px;
+				margin: 5px;
+				transition: all 0.3s ease;
+				width: 30px;	
+			}
+		}
+
+		.nav-toggle .line1 {
+			transform: rotate(-45deg) translate(-5px,6px);
+		}
+		
+		.nav-toggle .line2 {
+			transition: all 0.4s ease;
+			width: 0;
+		}
+		
+		.nav-toggle .line3 {
+			transform: rotate(45deg) translate(-5px,-6px);
+		}
+
+		ul {
+			justify-content: end;
+	
+			li {
+				a {
+					color: $color-earthborn-bugle;
+				}
+	
+				a::before {
+					background-color: $color-earthborn-bugle;
+					content: "";
+					display: block;
+					height: 3px;
+					margin: 30px 0 0 5%;
+					position: absolute;
+					transition: all ease-in-out 250ms;
+					width: 0%;
+				}
+	
+				a:hover {
+					color: $color-earthborn-bugle;
+				}
+	
+				a:hover::before {
+					width: 90%;
+				}
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 896px) {
+	nav {
+		position: fixed;
+		z-index: 3;
+
+		.header-container {
+			.hamburger {
+				cursor: pointer;
+				display: block;
+				position: absolute;
+				right: 5%;
+				top: 50%;
+				transform: translate(-5%, -50%);
+				transition: all 0.7s ease;
+				z-index: 2;
+			}
+		
+			ul {
+				background: $color-dark-cyan-blue;
+				clip-path: circle(50px at 90% -20%);
+				flex-direction: column;
+				height: 100vh;
+				justify-content: space-evenly;
+				margin-left: 0;
+				pointer-events: none;
+				position: fixed;
+				transition: all 0.4s ease-out;
+				width: 100%;
+				-webkit-clip-path: circle(50px at 90% -10%);
+
+				.nav-open {
+					clip-path: circle(1000px at 90% -10%);
+					pointer-events: all;
+					-webkit-clip-path: circle(1500px at 90% -10%);
+				}
+			
+				li {
+					opacity: 0;
+				}
+			
+				li:nth-child(1) {
+					transition: all 0.4s ease 0.2s;
+					background-color: red;
+				}
+			
+				li:nth-child(2) {
+					transition: all 0.4s ease 0.4s;
+				}
+			
+				li:nth-child(3) {
+					transition: all 0.4s ease 0.6s;
+				}
+			
+				li.nav-fade {
+					opacity: 1;
+				}
+			}
+		}
+	}
+}
