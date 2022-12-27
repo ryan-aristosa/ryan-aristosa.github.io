@@ -7,21 +7,17 @@ nav {
 	height: 64px;
 	z-index: 1;
 
-	.header-container {
-		height: 100%;
-		width: 100%;
+	.header-center {
 		max-width: 1200px;
-		margin: 0 auto;
 
 		.logo-container {
-			height: 100%;
 			padding: 9px;
 
 			img {
-				animation: rotate 1s;
+				animation: logo-rotate 1s;
 			}
 			 
-			@keyframes rotate {
+			@keyframes logo-rotate {
 				from {
 					transform: rotate(0deg);
 				}
@@ -92,10 +88,7 @@ nav {
 
 @media screen and (max-width: 896px) {
 	nav {
-		// position: fixed;
-		// z-index: 2;
-
-		.header-container {
+		.header-center {
 			.hamburger {
 				cursor: pointer;
 				display: block;

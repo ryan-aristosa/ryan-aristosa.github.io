@@ -4,9 +4,9 @@ import React from 'react';
 
 function Navigation() {
 	const navObj = {
-		home: 'fas fa-home',
-		experience: 'fas fa-code',
-		project: 'fas fa-project-diagram'
+		home: 'fa-solid fa-house',
+		experience: 'fa-solid fa-code',
+		project: 'fa-solid fa-diagram-project'
 	};
 
 	React.useEffect(() => {
@@ -37,8 +37,8 @@ function Navigation() {
 
 	return(
 		<nav className='position-fixed w-100'>
-			<div className='header-container d-flex'>
-				<div className='logo-container'>
+			<div className='header-center h-100 w-100 my-0 mx-auto d-flex'>
+				<div className='logo-container h-100'>
 					<a href='https://rynrsts.github.io/'>
 						<img src={logoReversed} alt='Logo (white)' className='h-100' />
 					</a>
