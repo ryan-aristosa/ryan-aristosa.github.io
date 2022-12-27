@@ -42,7 +42,7 @@ function Home() {
 						className='fab-wrapper email d-flex align-items-center 
 							justify-content-center m-2'
 					>
-						<i class='fas fa-envelope'></i>
+						<i className='fas fa-envelope'></i>
 					</a>
 				</div>
 			</div>

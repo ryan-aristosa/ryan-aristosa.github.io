@@ -1,0 +1,133 @@
+$color-very-light-gray: #F1F1F1;
+
+.experience {
+	background-color: $color-very-light-gray;
+	margin-top: 120px;
+
+	.exp-center {
+		max-width: 1200px;
+
+		.exp-title {
+			font-weight: 600;
+			letter-spacing: 1.5px;
+		}
+
+		.timeline {
+			.time-card {
+				background-color: inherit;
+				padding: 10px 40px;
+				width: 50%;
+
+				.details {
+					background-color: #FBFBFB;
+					border-radius: 8px;
+					box-shadow: 3px 5px 20px rgba(0, 0, 0, 0.5);
+					padding: 30px 30px 15px 30px;
+
+					h6 {
+						font-weight: 600;
+						letter-spacing: 1.1px;
+					}
+
+					li {
+						margin-top: 5px;
+					}
+				}
+			}
+			
+			.time-card::after {
+				background-color: #373D48;
+				border-radius: 50%;
+				content: '';
+				height: 20px;
+				position: absolute;
+				right: -11px;
+				top: 22px;
+				width: 20px;
+				z-index: 1;
+			}
+
+			.left {
+				left: 0;
+			}
+			
+			.left::before {
+				border: medium solid #FBFBFB;
+				border-color: transparent transparent transparent #FBFBFB;
+				border-width: 10px 0 10px 10px;
+				content: " ";
+				height: 0;
+				position: absolute;
+				right: 30px;
+				top: 22px;
+				width: 0;
+				z-index: 1;
+			}
+
+			.right {
+				left: 50%;
+			}
+			
+			.right::before {
+				border: medium solid #FBFBFB;
+				border-color: transparent #FBFBFB transparent transparent;
+				border-width: 10px 10px 10px 0;
+				content: " ";
+				height: 0;
+				left: 30px;
+				position: absolute;
+				top: 22px;
+				width: 0;
+				z-index: 1;
+			}
+			
+			.right::after {
+				left: -10px;
+			}
+		}
+
+		.timeline::after {
+			background-color: #565F71;
+			bottom: 0;
+			content: '';
+			left: 50%;
+			margin-left: -1px;
+			position: absolute;
+			top: 0;
+			width: 3px;
+		}
+	}
+}
+
+@media screen and (max-width: 768px) {
+	.experience {
+		.exp-center {
+			.timeline {
+				.time-card {
+					padding-left: 70px;
+					padding-right: 20px;
+					width: 100%;
+				}
+
+				.time-card::before {
+					border: medium solid #FBFBFB;
+					border-color: transparent #FBFBFB transparent transparent;
+					border-width: 10px 10px 10px 0;
+					left: 60px;
+				}
+
+				.left::after, .right::after {
+					left: 20px;
+				}
+			
+				.right {
+					left: 0;
+				}
+			}
+
+			.timeline::after {
+				left: 30px;
+			}
+		}
+	}
+}
