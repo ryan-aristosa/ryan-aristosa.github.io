@@ -3,13 +3,13 @@ import '../styles/Home.scss';
 function Home() {
 	return(
 		<div className='home'>
-			<div className='home-center my-0 mx-auto px-3'>
-				<p>RYAN ARISTOSA</p>
-				<p className='mt-5'>
+			<div className='mw-1200 my-0 mx-auto px-3'>
+				<p className='p-0 m-0'>RYAN ARISTOSA</p>
+				<p className='p-0 mx-0 mb-0 mt-5'>
 					<i className='fa-solid fa-briefcase'></i>
 					&ensp;Jr. Software Engineer at Cognizant Softvision
 				</p>
-				<p className='mt-3'>
+				<p className='p-0 mx-0 mb-0 mt-3'>
 					<i className='fa-solid fa-location-dot'></i>
 					&ensp;Makati, Metro Manila, Philippines
 				</p>
@@ -19,7 +19,7 @@ function Home() {
 						aria-label='GitHub' 
 						rel='noreferrer' 
 						target='_blank'
-						className='fab-wrapper github d-flex align-items-center 
+						className='fab-wrapper github c-eb d-flex align-items-center 
 							justify-content-center m-2'
 					>
 						<i className='fab fa-github'></i>
@@ -29,7 +29,7 @@ function Home() {
 						aria-label='LinkedIn' 
 						rel='noreferrer' 
 						target='_blank'
-						className='fab-wrapper linkedin d-flex align-items-center 
+						className='fab-wrapper linkedin c-eb d-flex align-items-center 
 							justify-content-center m-2'
 					>
 						<i className='fab fa-linkedin-in'></i>
@@ -39,7 +39,7 @@ function Home() {
 						aria-label='Email'  
 						rel='noreferrer' 
 						target='_blank'
-						className='fab-wrapper email d-flex align-items-center 
+						className='fab-wrapper email c-eb d-flex align-items-center 
 							justify-content-center m-2'
 					>
 						<i className='fas fa-envelope'></i>

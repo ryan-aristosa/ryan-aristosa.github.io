@@ -36,8 +36,8 @@ function Navigation() {
 	});
 
 	return(
-		<nav className='position-fixed w-100'>
-			<div className='header-center h-100 w-100 my-0 mx-auto d-flex'>
+		<nav className='bc-dcb position-fixed w-100'>
+			<div className='mw-1200 h-100 w-100 my-0 mx-auto d-flex'>
 				<div className='logo-container h-100'>
 					<a href='https://rynrsts.github.io/'>
 						<img src={logoReversed} alt='Logo (white)' className='h-100' />
@@ -54,7 +54,7 @@ function Navigation() {
 							<li className='position-relative' key={key}>
 								<a 
 									href={'#' + (key !== 'home' ? key : '')} 
-									className='text-decoration-none mx-3'
+									className='c-eb text-decoration-none mx-3'
 								>
 									<i className={navObj[key]}></i>
 									&ensp;{key.charAt(0).toUpperCase() + key.slice(1)}

@@ -1,11 +1,7 @@
 $color-earthborn-bugle: #F7F7F7;
-$color-dark-cyan-blue: #373D48;
 
 footer {
-	background-color: $color-dark-cyan-blue;
-	color: $color-earthborn-bugle;
-
-    a, a:hover {
+    a:hover {
         color: $color-earthborn-bugle;
     }
 }

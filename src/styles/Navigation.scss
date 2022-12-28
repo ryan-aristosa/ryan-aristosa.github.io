@@ -2,14 +2,11 @@ $color-earthborn-bugle: #F7F7F7;
 $color-dark-cyan-blue: #373D48;
 
 nav {
-	background-color: $color-dark-cyan-blue;
 	box-shadow: 0 3px 20px rgba(0, 0, 0, 0.2);
 	height: 64px;
 	z-index: 1;
 
-	.header-center {
-		max-width: 1200px;
-
+	.mw-1200 {
 		.logo-container {
 			padding: 9px;
 
@@ -58,11 +55,7 @@ nav {
 		ul {
 			justify-content: end;
 	
-			li {
-				a {
-					color: $color-earthborn-bugle;
-				}
-	
+			li {	
 				a::before {
 					background-color: $color-earthborn-bugle;
 					content: "";
@@ -88,7 +81,7 @@ nav {
 
 @media screen and (max-width: 896px) {
 	nav {
-		.header-center {
+		.mw-1200 {
 			.hamburger {
 				cursor: pointer;
 				display: block;

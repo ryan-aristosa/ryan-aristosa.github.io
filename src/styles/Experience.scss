@@ -2,11 +2,8 @@ $color-very-light-gray: #F1F1F1;
 
 .experience {
 	background-color: $color-very-light-gray;
-	margin-top: 120px;
 
-	.exp-center {
-		max-width: 1200px;
-
+	.mw-1200 {
 		.timeline {
 			.time-card {
 				background-color: inherit;
@@ -22,10 +19,6 @@ $color-very-light-gray: #F1F1F1;
 					h6 {
 						font-weight: 600;
 						letter-spacing: 1.1px;
-					}
-
-					li {
-						margin-top: 5px;
 					}
 				}
 			}
@@ -96,7 +89,7 @@ $color-very-light-gray: #F1F1F1;
 
 @media screen and (max-width: 768px) {
 	.experience {
-		.exp-center {
+		.mw-1200 {
 			.timeline {
 				.time-card {
 					padding-left: 70px;

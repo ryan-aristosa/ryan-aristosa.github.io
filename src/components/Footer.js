@@ -2,9 +2,9 @@ import '../styles/Footer.scss'
 
 function Footer() {
     return(
-        <footer className='text-center py-3'>
+        <footer className='bc-dcb c-eb text-center py-3'>
 			Copyright &copy; 2022&nbsp;
-		    <a href='https://ryan-aristosa.github.io/' className='text-decoration-none'>
+		    <a href='https://ryan-aristosa.github.io/' className='c-eb text-decoration-none'>
                 ryan-aristosa
             </a>
 		</footer>

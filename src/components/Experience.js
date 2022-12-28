@@ -24,7 +24,7 @@ function Experience() {
 
 	return(
 		<div className='experience' id='experience'>
-			<div className='exp-center my-0 mx-auto py-5 px-3'>
+			<div className='mw-1200 my-0 mx-auto py-5 px-3'>
 				<h3 className='section-title text-center'>Experience</h3>
 				<div className='timeline mx-auto mt-5 position-relative'>
 					{
@@ -35,7 +35,7 @@ function Experience() {
 									<ul className='px-3'>
 										{
 											details.map(detail => (
-												<li>{detail}</li>
+												<li className='mt-2'>{detail}</li>
 											))
 										}
 									</ul>
