@@ -2,13 +2,7 @@ import '../styles/Navigation.scss';
 import logoReversed from '../assets/logo-reversed.png';
 import React from 'react';
 
-function Navigation() {
-	const navObj = {
-		home: 'fa-solid fa-house',
-		experience: 'fa-solid fa-code',
-		project: 'fa-solid fa-diagram-project'
-	};
-
+function Navigation(props) {
 	React.useEffect(() => {
 		const hamburger = document.querySelector('.hamburger');
 		const navLinks = document.querySelector('nav ul');
@@ -50,13 +44,13 @@ function Navigation() {
 				</div>
 				<ul className='list-unstyled h-100 w-100 d-flex align-items-center me-3'>
 					{
-						Object.keys(navObj).map((key) => (
+						Object.keys(props.navObj).map((key) => (
 							<li className='position-relative' key={key}>
 								<a 
 									href={'#' + (key !== 'home' ? key : '')} 
 									className='c-eb text-decoration-none mx-3'
 								>
-									<i className={navObj[key]}></i>
+									<i className={props.navObj[key]}></i>
 									&ensp;{key.charAt(0).toUpperCase() + key.slice(1)}
 								</a>
 							</li>
