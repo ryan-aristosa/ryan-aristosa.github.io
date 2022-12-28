@@ -4,7 +4,7 @@ $color-dark-cyan-blue: #373D48;
 nav {
 	box-shadow: 0 3px 20px rgba(0, 0, 0, 0.2);
 	height: 64px;
-	z-index: 1;
+	z-index: 10;
 
 	.mw-1200 {
 		.logo-container {
@@ -90,7 +90,7 @@ nav {
 				top: 50%;
 				transform: translate(-5%, -50%);
 				transition: all 0.7s ease;
-				z-index: 2;
+				z-index: 11;
 			}
 		
 			ul {
