@@ -12,7 +12,7 @@ function Experience() {
 			]
 		],
 		[
-			'2018 - August 2022 (College Education)',
+			'2018 - August 2022 (College)',
 			'right',
 			[
 				'Bachelor of Science in Information Technology',
@@ -24,9 +24,9 @@ function Experience() {
 
 	return(
 		<div className='experience' id='experience'>
-			<div className='exp-center my-0 mx-auto px-3'>
-				<h3 className='exp-title text-center py-5'>Experience</h3>
-				<div className='timeline mx-auto position-relative'>
+			<div className='exp-center my-0 mx-auto py-5 px-3'>
+				<h3 className='section-title text-center'>Experience</h3>
+				<div className='timeline mx-auto mt-5 position-relative'>
 					{
 						timelineObj.map(([time, side, details]) => (
 							<div className={'time-card position-relative ' + side}>
