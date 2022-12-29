@@ -2,7 +2,7 @@ import '../styles/Experience.scss';
 
 function Experience(props) {
 	return(
-		<div className='experience' id='experience'>
+		<div className='experience smt-64' id='experience'>
 			<div className='mw-1200 my-0 mx-auto py-5 px-3'>
 				<h3 className='section-title text-center'>Experience</h3>
 				<div className='timeline mx-auto mt-5 position-relative'>
