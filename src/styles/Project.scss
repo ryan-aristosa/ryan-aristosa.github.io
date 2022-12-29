@@ -1,1 +1,50 @@
+$color-cyan: #477890;
+$color-earthborn-bugle: #F7F7F7;
 
+.project {
+	.mw-1200 {
+		div {
+			.card-container {
+				width: 50%;
+
+				.card {
+					background-color: $color-cyan;
+					box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+					transition-duration: 0.4s;
+
+					.card-body {
+						div {
+							div {
+								a {
+									border: 1px solid $color-earthborn-bugle;
+								}
+								
+								a:hover {
+									background-color: $color-earthborn-bugle;
+									color: $color-cyan;
+								}
+							}
+						}
+					}
+				}
+
+				.card:hover {
+					transform: scale(1.04);
+					transition-duration: 0.4s;
+				}
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 768px) {
+	.project {
+		.mw-1200 {
+			div {
+				.card-container {
+					width: 100%;
+				}
+			}
+		}
+	}
+}

@@ -10,7 +10,7 @@ function Experience(props) {
 						(props.timelineObj).map(([time, side, details], timeIndex) => (
 							<div className={'time-card position-relative ' + side} key={timeIndex}>
 								<div className='details position-relative'>
-									<h6 className='text-center mb-4'>{time}</h6>
+									<h6 className='fw-600 text-center mb-4'>{time}</h6>
 									<ul className='px-3'>
 										{
 											details.map((detail, detailIndex) => (
