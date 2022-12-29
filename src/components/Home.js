@@ -3,7 +3,7 @@ import '../styles/Home.scss';
 function Home() {
 	return(
 		<div className='home'>
-			<div className='mw-1200 my-0 mx-auto px-3'>
+			<div className='mw-1200 my-0 mx-auto text-center px-3 '>
 				<p className='p-0 m-0'>RYAN ARISTOSA</p>
 				<p className='p-0 mx-0 mb-0 mt-5'>
 					<i className='fa-solid fa-briefcase'></i>
