@@ -29,7 +29,7 @@ function Project() {
 									</div>
 									<div className='w-50 ps-2'>
 										<a 
-											href='http://localhost:8081/authors' 
+											href='/books-and-authors' 
 											rel='noreferrer' 
 											target='_blank' 
 											className='btn w-100 h-100'

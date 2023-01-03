@@ -4,7 +4,7 @@ import Home from './Home';
 import Project from './Project';
 
 // Experience
-const timelineObj = [
+const TIMELINE_OBJ = [
 	[
 		'October 2022 - Present',
 		'left',
@@ -29,7 +29,7 @@ function Content() {
 	return(
 		<div className='content'>
 			<Home />
-			<Experience timelineObj={timelineObj} />
+			<Experience timelineObj={TIMELINE_OBJ} />
 			<Project />
 		</div>
 	);

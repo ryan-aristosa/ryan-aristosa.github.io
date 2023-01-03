@@ -4,28 +4,28 @@ import React from 'react';
 
 function Navigation(props) {
 	React.useEffect(() => {
-		const hamburger = document.querySelector('.hamburger');
-		const navLinks = document.querySelector('nav ul');
-		const links = document.querySelectorAll('nav ul li');
+		const HAMBURGER = document.querySelector('.hamburger');
+		const NAV_LINKS = document.querySelector('nav ul');
+		const LINKS = document.querySelectorAll('nav ul li');
 
-		hamburger.addEventListener('click', () => {
-			navLinks.classList.toggle('nav-open');
+		HAMBURGER.addEventListener('click', () => {
+			NAV_LINKS.classList.toggle('nav-open');
 
-			links.forEach(link => {
+			LINKS.forEach(link => {
 				link.classList.toggle('nav-fade');
 			});
 
-			hamburger.classList.toggle('nav-toggle');
+			HAMBURGER.classList.toggle('nav-toggle');
 		});
 
-		navLinks.addEventListener('click', () => {
-			navLinks.classList.toggle('nav-open');
+		NAV_LINKS.addEventListener('click', () => {
+			NAV_LINKS.classList.toggle('nav-open');
 
-			links.forEach(link => {
+			LINKS.forEach(link => {
 				link.classList.toggle('nav-fade');
 			});
 
-			hamburger.classList.toggle('nav-toggle');
+			HAMBURGER.classList.toggle('nav-toggle');
 		});
 	});
 
