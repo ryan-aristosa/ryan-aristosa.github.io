@@ -22,7 +22,7 @@ function Project() {
 											href='https://github.com/ryan-aristosa/books-and-authors' 
 											rel='noreferrer' 
 											target='_blank' 
-											className='c-eb btn w-100 h-100'
+											className='btn w-100 h-100'
 										>
 											Open Source
 										</a>
@@ -32,7 +32,7 @@ function Project() {
 											href='http://localhost:8081/authors' 
 											rel='noreferrer' 
 											target='_blank' 
-											className='c-eb btn w-100 h-100'
+											className='btn w-100 h-100'
 										>
 											Try it!
 										</a>
