@@ -1,4 +1,5 @@
 import '../styles/Home.scss';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 function Home() {
 	return(
@@ -6,11 +7,11 @@ function Home() {
 			<div className='mw-1200 my-0 mx-auto text-center px-3 '>
 				<p className='p-0 m-0'>RYAN ARISTOSA</p>
 				<p className='p-0 mx-0 mb-0 mt-5'>
-					<i className='fa-solid fa-briefcase'></i>
+					<FontAwesomeIcon icon='fa-solid fa-briefcase' />
 					&ensp;Jr. Software Engineer at Cognizant Softvision
 				</p>
 				<p className='p-0 mx-0 mb-0 mt-3'>
-					<i className='fa-solid fa-location-dot'></i>
+					<FontAwesomeIcon icon='fa-solid fa-location-dot' />
 					&ensp;Makati, Metro Manila, Philippines
 				</p>
 				<div className='d-flex flex-wrap justify-content-center mt-4 pt-4'>
@@ -22,7 +23,7 @@ function Home() {
 						className='fab-wrapper github c-eb d-flex align-items-center 
 							justify-content-center m-2'
 					>
-						<i className='fab fa-github'></i>
+						<FontAwesomeIcon icon='fa-brands fa-github' />
 					</a>
 					<a 
 						href='https://www.linkedin.com/in/rynrsts/' 
@@ -32,7 +33,7 @@ function Home() {
 						className='fab-wrapper linkedin c-eb d-flex align-items-center 
 							justify-content-center m-2'
 					>
-						<i className='fab fa-linkedin-in'></i>
+						<FontAwesomeIcon icon='fa-brands fa-linkedin-in' />
 					</a>
 					<a 
 						href='mailto: ryan.aristosa@softvision.com' 
@@ -42,7 +43,7 @@ function Home() {
 						className='fab-wrapper email c-eb d-flex align-items-center 
 							justify-content-center m-2'
 					>
-						<i className='fas fa-envelope'></i>
+						<FontAwesomeIcon icon='fa-solid fa-envelope' />
 					</a>
 				</div>
 			</div>

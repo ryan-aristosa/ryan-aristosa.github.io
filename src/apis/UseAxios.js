@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 
-const useAxios = (configObj) => {
+const UseAxios = (configObj) => {
 	const {
 		axiosInstance,
 		method,
@@ -25,9 +25,9 @@ const useAxios = (configObj) => {
 					signal: controller.signal
 				});
 				// console.log(res);
-				setResponse(res.data);
+				setResponse(res.data.content);
 			} catch (err) {
-				console.log(err.message);
+				// console.log(err.message);
 				setError(err.message);
 			} finally {
 				setLoading(false);
@@ -42,4 +42,4 @@ const useAxios = (configObj) => {
 	return [response, error, loading, refetch];
 }
 
-export default useAxios;
+export default UseAxios;

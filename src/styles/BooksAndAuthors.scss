@@ -1,5 +1,10 @@
 .books-and-authors {
 	height: 64px;
+
+	.network, .loading {
+		height: 100vh;
+		margin-top: -64px;
+	}
 	
 	.mw-1200 {
 		div {
@@ -10,12 +15,6 @@
 					box-shadow: 2px 5px 10px rgba(0, 0, 0, 0.4);
 					cursor: pointer;
 					transition-duration: 0.4s;
-
-					.card-body {
-						p:nth-child(1) {
-							font-weight: 600;
-						}
-					}
 				}
 
 				.card:hover {

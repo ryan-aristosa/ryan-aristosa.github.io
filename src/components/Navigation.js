@@ -1,6 +1,7 @@
 import '../styles/Navigation.scss';
 import logoReversed from '../assets/logo-reversed.png';
 import React from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 function Navigation(props) {
 	React.useEffect(() => {
@@ -50,7 +51,8 @@ function Navigation(props) {
 									href={'#' + (key !== 'home' ? key : '')} 
 									className='c-eb text-decoration-none mx-3'
 								>
-									<i className={props.navObj[key]}></i>
+									{/* <i className={props.navObj[key]}></i> */}
+									<FontAwesomeIcon icon={props.navObj[key]} />
 									&ensp;{key.charAt(0).toUpperCase() + key.slice(1)}
 								</a>
 							</li>
