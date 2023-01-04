@@ -4,6 +4,9 @@ $color-very-light-gray: #F1F1F1;
 	background-color: $color-very-light-gray;
 
 	.mw-1200 {
+		padding-bottom: 120px;
+		padding-top: 120px;
+
 		.timeline {
 			.time-card {
 				background-color: inherit;
@@ -15,6 +18,16 @@ $color-very-light-gray: #F1F1F1;
 					border-radius: 8px;
 					box-shadow: 3px 5px 20px rgba(0, 0, 0, 0.5);
 					padding: 30px 30px 15px 30px;
+				}
+
+				ul {
+					li {
+						div {
+							div {
+								border-radius: 20px;
+							}
+						}
+					}
 				}
 			}
 			

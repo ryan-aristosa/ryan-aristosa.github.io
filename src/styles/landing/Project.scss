@@ -1,27 +1,39 @@
-$color-cyan: #477890;
 $color-earthborn-bugle: #F7F7F7;
+$color-dark-cyan-blue: #373D48;
 
 .project {
 	.mw-1200 {
+		padding-bottom: 120px;
+		padding-top: 120px;
+
 		div {
 			.card-container {
-				width: 50%;
+				width: 33%;
 
 				.card {
-					background-color: $color-cyan;
-					box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+					background-color: $color-dark-cyan-blue;
+					box-shadow: 3px 5px 20px rgba(0, 0, 0, 0.5);
 					transition-duration: 0.4s;
 
 					.card-body {
 						div {
+							.tech-stack {
+								.color-java, .color-spring-boot {
+									border-radius: 20px;
+								}
+							}
+						}
+
+						.buttons {
 							div {
 								a {
 									border: 1px solid $color-earthborn-bugle;
+									color: $color-earthborn-bugle;
 								}
 								
 								a:hover {
 									background-color: $color-earthborn-bugle;
-									color: $color-cyan;
+									color: $color-dark-cyan-blue;
 								}
 							}
 						}
@@ -31,6 +43,18 @@ $color-earthborn-bugle: #F7F7F7;
 				.card:hover {
 					transform: scale(1.04);
 					transition-duration: 0.4s;
+				}
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 1200px) {
+	.project {
+		.mw-1200 {
+			div {
+				.card-container {
+					width: 50%;
 				}
 			}
 		}
