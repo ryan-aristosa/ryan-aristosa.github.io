@@ -1,9 +1,9 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import '../styles/App.scss';
-import BooksAndAuthors from './BooksAndAuthors';
-import Content from './Content';
-import Footer from './Footer'
-import Navigation from './Navigation.js';
+import BooksAndAuthors from './books_and_authors/BooksAndAuthors';
+import Content from './landing/Content';
+import Footer from './landing/Footer'
+import Navigation from './landing/Navigation.js';
 
 // Navigation
 const NAV_OBJ = {

@@ -1,9 +1,9 @@
 import React from 'react';
-import '../styles/BooksAndAuthors.scss';
+import '../../styles/books_and_authors/BooksAndAuthors.scss';
 import Authors from './Authors';
-import ProjectTitle from './ProjectTitle';
-import UseAxios from '../apis/UseAxios';
-import axios from '../apis/AuthorsAPI';
+import ProjectTitle from '../project/ProjectTitle';
+import UseAxios from '../../apis/UseAxios';
+import axios from '../../apis/AuthorsAPI';
 
 function BooksAndAuthors() {
 	const [response, error, loading, refetch] = UseAxios({

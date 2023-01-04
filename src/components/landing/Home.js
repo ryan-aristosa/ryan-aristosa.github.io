@@ -1,9 +1,9 @@
-import '../styles/Home.scss';
+import '../../styles/landing/Home.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 function Home() {
 	return(
-		<div className='home'>
+		<div className='home d-flex align-items-center'>
 			<div className='mw-1200 my-0 mx-auto text-center px-3 '>
 				<p className='p-0 m-0'>RYAN ARISTOSA</p>
 				<p className='p-0 mx-0 mb-0 mt-5'>

@@ -1,9 +1,21 @@
-import '../styles/Navigation.scss';
-import logoReversed from '../assets/logo-reversed.png';
+import '../../styles/landing/Navigation.scss';
+import logoReversed from '../../assets/logo-reversed.png';
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 function Navigation(props) {
+	const NAV_OBJ = Object.keys(props.navObj).map((key) => (
+		<li className='position-relative' key={key}>
+			<a 
+				href={'#' + (key !== 'home' ? key : '')} 
+				className='c-eb text-decoration-none mx-3'
+			>
+				<FontAwesomeIcon icon={props.navObj[key]} />
+				&ensp;{key.charAt(0).toUpperCase() + key.slice(1)}
+			</a>
+		</li>
+	));
+
 	React.useEffect(() => {
 		const HAMBURGER = document.querySelector('.hamburger');
 		const NAV_LINKS = document.querySelector('nav ul');
@@ -44,20 +56,7 @@ function Navigation(props) {
 					<div className='line3'></div>
 				</div>
 				<ul className='list-unstyled h-100 w-100 d-flex align-items-center me-3'>
-					{
-						Object.keys(props.navObj).map((key) => (
-							<li className='position-relative' key={key}>
-								<a 
-									href={'#' + (key !== 'home' ? key : '')} 
-									className='c-eb text-decoration-none mx-3'
-								>
-									{/* <i className={props.navObj[key]}></i> */}
-									<FontAwesomeIcon icon={props.navObj[key]} />
-									&ensp;{key.charAt(0).toUpperCase() + key.slice(1)}
-								</a>
-							</li>
-						))
-					}
+					{NAV_OBJ}
 				</ul>
 			</div>
 		</nav>
