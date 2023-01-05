@@ -1,5 +1,5 @@
+import { addAuthorRequest, deleteAuthorRequest } from '../../apis/AuthorsRequest';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { deleteAuthorById } from '../../apis/AuthorsAPI';
 
 function Authors(props) {
 	let clickedId = 0;
@@ -8,19 +8,19 @@ function Authors(props) {
 		clickedId = event.currentTarget.id;
 	};
 
-	function deleteAuthor() {
-		let deleteRequest = {
-			method: 'delete',
-			headers: {
-				'Content-Type': 'application/json'
-			},
-			params: {
-				id: clickedId
-			}
-		};
+	function addAuthor() {
+		addAuthorRequest(document.getElementById('authorName').value);
+		document.getElementById('authorName').value = '';
+		delayRefetch();
+	}
 
-		deleteAuthorById(deleteRequest);
-		setTimeout(function () { 
+	function deleteAuthor() {
+		deleteAuthorRequest(clickedId);
+		delayRefetch();
+	}
+
+	function delayRefetch() {
+		setTimeout(function () {
 			props.refetch();
 		}, 500);
 	}
@@ -35,6 +35,8 @@ function Authors(props) {
 							<div
 								className='card-body d-flex justify-content-center 
 									align-items-center text-primary'
+								data-bs-toggle='modal'
+								data-bs-target='#addAuthorModal'
 							>
 								Add&nbsp;
 								<FontAwesomeIcon icon='fa-solid fa-plus' />
@@ -55,7 +57,7 @@ function Authors(props) {
 											<div
 												className='d-inline px-2 py-1 mx-1 text-danger'
 												data-bs-toggle='modal'
-												data-bs-target='#staticBackdrop'
+												data-bs-target='#deleteAuthorModal'
 												id={data.id}
 												onClick={setClickedId}
 											>
@@ -70,9 +72,56 @@ function Authors(props) {
 				</div>
 			</div>
 
+			{/* Add author */}
 			<div
 				className='modal fade'
-				id='staticBackdrop'
+				id='addAuthorModal'
+				data-bs-backdrop='static'
+				data-bs-keyboard='false'
+				tabIndex='-1'
+				aria-labelledby='staticBackdropLabel'
+				aria-hidden='true'
+			>
+				<div className='modal-dialog'>
+					<div className='modal-content'>
+						<div className='modal-header'>
+							<h1 className='modal-title fs-5' id='staticBackdropLabel'>
+								Add author
+							</h1>
+							<button
+								type='button'
+								className='btn-close'
+								data-bs-dismiss='modal'
+								aria-label='Close'
+							></button>
+						</div>
+						<div className='modal-body'>
+							<label htmlFor='authorName'>Name:</label>
+							<input type='text' className='form-control' id="authorName" />
+						</div>
+						<div className='modal-footer'>
+							<button
+								type='button'
+								className='btn btn-secondary'
+								data-bs-dismiss='modal'
+							>Close</button>
+							<button
+								type='button'
+								className='btn btn-danger'
+								onClick={addAuthor}
+								data-bs-dismiss='modal'
+							>
+								Add
+							</button>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			{/* Delete author */}
+			<div
+				className='modal fade'
+				id='deleteAuthorModal'
 				data-bs-backdrop='static'
 				data-bs-keyboard='false'
 				tabIndex='-1'

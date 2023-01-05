@@ -10,6 +10,11 @@ export const getAllAuthors = axios.create({
 	}
 });
 
+export function addAuthor(props) {
+	props.url = BASE_URL;
+	axios(props);
+}
+
 export function deleteAuthorById(props) {
 	props.url = BASE_URL;
 	axios(props);

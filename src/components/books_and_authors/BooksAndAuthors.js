@@ -3,7 +3,7 @@ import '../../styles/books_and_authors/BooksAndAuthors.scss';
 import Authors from './Authors';
 import ProjectTitle from '../project/ProjectTitle';
 import UseAxios from '../../apis/UseAxios';
-import { getAllAuthors } from '../../apis/AuthorsAPI';
+import { getAllAuthors } from '../../apis/AuthorsAxios';
 
 function BooksAndAuthors() {
 	const [response, error, loading, refetch] = UseAxios({
