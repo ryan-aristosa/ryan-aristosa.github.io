@@ -7,32 +7,33 @@ import axios from '../../apis/AuthorsAPI';
 
 function BooksAndAuthors() {
 	const [response, error, loading, refetch] = UseAxios({
-        axiosInstance: axios,
-        method: 'GET',
-        url: '/',
-        requestConfig: {
-            headers: {
-                'Content-Language': 'en-US'
-            }
-        }
-    });
+		axiosInstance: axios,
+		method: 'GET',
+		url: '/',
+		requestConfig: {
+			headers: {
+				'Content-Language': 'en-US'
+			}
+		}
+	});
+	let content;
+
+	if (loading) {
+		content = <div className='network d-flex justify-content-center align-items-center'>
+			<h3 className='fw-600 text-primary'>Loading...</h3>
+		</div>
+	} else if (!loading && error) {
+		content = <div className='loading d-flex justify-content-center align-items-center'>
+			<h3 className='fw-600 text-danger'>{error}</h3>
+		</div>
+	} else if (!loading && !error) {
+		content = <Authors response={response} />
+	}
 
 	return (
 		<div className='books-and-authors'>
 			<ProjectTitle title='Books and Authors' />
-			{loading &&
-				<div className='network d-flex justify-content-center align-items-center'>
-					<h3 className='fw-600 text-primary'>Loading...</h3>
-				</div>
-			}
-			{error &&
-				<div className='loading d-flex justify-content-center align-items-center'>
-					<h3 className='fw-600 text-danger'>{error}</h3>
-				</div>
-			}
-			{!error &&
-				<Authors response={response} />
-			}
+			{content}
 		</div>
 	);
 }

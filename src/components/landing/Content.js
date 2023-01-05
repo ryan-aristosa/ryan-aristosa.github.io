@@ -12,6 +12,7 @@ const TIMELINE_OBJ = [
 		[
 			['Java', 'color-java', 'c-eb'],
 			['Spring Boot', 'color-spring-boot', 'c-eb'],
+			['Hibernate', 'color-hibernate', 'c-eb'],
 			['React', 'color-react', 'c-dcb'],
 			['Bootstrap', 'color-bootstrap', 'c-eb']
 		]
@@ -26,10 +27,12 @@ const TIMELINE_OBJ = [
 		],
 		[
 			['Java', 'color-java', 'c-eb'],
-			['Javascript', 'color-javascript', 'c-dcb'],
-			['Bootstrap', 'color-bootstrap', 'c-eb'],
 			['C#', 'color-c-sharp', 'c-eb'],
+			['HTML', 'color-html', 'c-eb'],
+			['CSS', 'color-css', 'c-eb'],
+			['Javascript', 'color-javascript', 'c-dcb'],
 			['PHP', 'color-php', 'c-eb'],
+			['Bootstrap', 'color-bootstrap', 'c-eb'],
 			['Python', 'color-python', 'c-dcb']
 		]
 	]
