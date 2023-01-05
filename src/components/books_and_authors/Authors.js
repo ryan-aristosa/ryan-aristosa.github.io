@@ -1,14 +1,28 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { deleteAuthorById } from '../../apis/AuthorsAPI';
 
 function Authors(props) {
 	let clickedId = 0;
+
 	const setClickedId = event => {
 		clickedId = event.currentTarget.id;
 	};
 
 	function deleteAuthor() {
-		console.log(clickedId);
-		const deleteUrl = '?id=' + clickedId;
+		let deleteRequest = {
+			method: 'delete',
+			headers: {
+				'Content-Type': 'application/json'
+			},
+			params: {
+				id: clickedId
+			}
+		};
+
+		deleteAuthorById(deleteRequest);
+		setTimeout(function () { 
+			props.refetch();
+		}, 500);
 	}
 
 	return (

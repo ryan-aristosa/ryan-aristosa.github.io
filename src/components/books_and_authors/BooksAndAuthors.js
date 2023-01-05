@@ -3,11 +3,11 @@ import '../../styles/books_and_authors/BooksAndAuthors.scss';
 import Authors from './Authors';
 import ProjectTitle from '../project/ProjectTitle';
 import UseAxios from '../../apis/UseAxios';
-import axios from '../../apis/AuthorsAPI';
+import { getAllAuthors } from '../../apis/AuthorsAPI';
 
 function BooksAndAuthors() {
 	const [response, error, loading, refetch] = UseAxios({
-		axiosInstance: axios,
+		axiosInstance: getAllAuthors,
 		method: 'GET',
 		url: '/',
 		requestConfig: {
@@ -27,7 +27,7 @@ function BooksAndAuthors() {
 			<h3 className='fw-600 text-danger'>{error}</h3>
 		</div>
 	} else if (!loading && !error) {
-		content = <Authors response={response} />
+		content = <Authors response={response} refetch={refetch} />
 	}
 
 	return (
