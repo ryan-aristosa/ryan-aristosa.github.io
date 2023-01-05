@@ -1,5 +1,6 @@
-import { addAuthorRequest, deleteAuthorRequest } from '../../apis/AuthorsRequest';
+import { updateAuthorByIdAxios, deleteAuthorByIdAxios } from '../../apis/AuthorsAxios';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import AddAuthorModal from './AddAuthorModal';
 
 function Authors(props) {
 	let clickedId = 0;
@@ -8,14 +9,28 @@ function Authors(props) {
 		clickedId = event.currentTarget.id;
 	};
 
-	function addAuthor() {
-		addAuthorRequest(document.getElementById('authorName').value);
-		document.getElementById('authorName').value = '';
+	function updateAuthor() {
+		const author = { name: document.getElementById('updateAuthorName').value }
+		const updateRequest = {
+			method: 'patch',
+			headers: { 'Content-Type': 'application/json' },
+			data: author,
+			id: clickedId
+		};
+		
+		updateAuthorByIdAxios(updateRequest);
+		document.getElementById('updateAuthorName').value = '';
 		delayRefetch();
 	}
 
 	function deleteAuthor() {
-		deleteAuthorRequest(clickedId);
+		const deleteRequest = {
+			method: 'delete',
+			headers: { 'Content-Type': 'application/json' },
+			params: { id: clickedId }
+		};
+		
+		deleteAuthorByIdAxios(deleteRequest);
 		delayRefetch();
 	}
 
@@ -51,7 +66,13 @@ function Authors(props) {
 										<p className='p-0 m-0'>Id: {data.id}</p>
 										<p className='p-0 mt-2 mb-0 mx-0'>Name: {data.name}</p>
 										<div className='mt-2 d-flex justify-content-end'>
-											<div className='d-inline px-2 py-1 mx-1 text-primary'>
+											<div
+												className='d-inline px-2 py-1 mx-1 text-primary'
+												data-bs-toggle='modal'
+												data-bs-target='#updateAuthorModal'
+												id={data.id}
+												onClick={setClickedId}
+											>
 												<FontAwesomeIcon icon='fa-solid fa-pen-to-square' />
 											</div>
 											<div
@@ -72,10 +93,12 @@ function Authors(props) {
 				</div>
 			</div>
 
-			{/* Add author */}
+			<AddAuthorModal refetch={props.refetch} />
+
+			{/* Update author */}
 			<div
 				className='modal fade'
-				id='addAuthorModal'
+				id='updateAuthorModal'
 				data-bs-backdrop='static'
 				data-bs-keyboard='false'
 				tabIndex='-1'
@@ -86,7 +109,7 @@ function Authors(props) {
 					<div className='modal-content'>
 						<div className='modal-header'>
 							<h1 className='modal-title fs-5' id='staticBackdropLabel'>
-								Add author
+								Update author
 							</h1>
 							<button
 								type='button'
@@ -97,7 +120,7 @@ function Authors(props) {
 						</div>
 						<div className='modal-body'>
 							<label htmlFor='authorName'>Name:</label>
-							<input type='text' className='form-control' id="authorName" />
+							<input type='text' className='form-control' id="updateAuthorName" />
 						</div>
 						<div className='modal-footer'>
 							<button
@@ -108,10 +131,10 @@ function Authors(props) {
 							<button
 								type='button'
 								className='btn btn-danger'
-								onClick={addAuthor}
+								onClick={updateAuthor}
 								data-bs-dismiss='modal'
 							>
-								Add
+								Update
 							</button>
 						</div>
 					</div>
