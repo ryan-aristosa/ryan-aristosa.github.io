@@ -1,6 +1,6 @@
 import '../../styles/landing/Navigation.scss';
 import logoReversed from '../../assets/logo-reversed.png';
-import React from 'react';
+import { useEffect } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 function Navigation(props) {
@@ -16,7 +16,7 @@ function Navigation(props) {
 		</li>
 	));
 
-	React.useEffect(() => {
+	useEffect(() => {
 		const HAMBURGER = document.querySelector('.hamburger');
 		const NAV_LINKS = document.querySelector('nav ul');
 		const LINKS = document.querySelectorAll('nav ul li');

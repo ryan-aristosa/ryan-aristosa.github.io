@@ -48,7 +48,7 @@ const PROJECT_OBJ = [
 			['Spring Boot', 'color-spring-boot', 'c-eb']
 		],
 		'https://github.com/ryan-aristosa/books-and-authors',
-		'/books-and-authors'
+		'/authors'
 	],
 	[
 		'skill-and-employees',

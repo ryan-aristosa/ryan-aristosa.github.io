@@ -6,14 +6,17 @@ import DeleteAuthorModal from './DeleteAuthorModal';
 
 function Authors(props) {
 	const [clickedId, setClickedId] = useState(0);
-	const CALL_SET_CLICKED_ID = event => {
-		setClickedId(event.currentTarget.id)
+	const [clickedName, setClickedName] = useState('');
+	const SET_CLICKED_CARD = event => {
+		setClickedId(event.currentTarget.id);
+		setClickedName(event.currentTarget.parentNode.parentNode.id);
 	};
 
 	const AUTHOR_CARDS = props.response.map((data) => (
 		<div className='card-container d-flex' key={data.id}>
-			<div className='card w-100 rounded m-2 p-2'>
-				<div className='card-body'>
+			{/* <a href={'/authors/' + data.id} className='w-100'> */}
+			<div className='c-dcb card w-100 rounded p-2 m-2 text-decoration-none'>
+				<div className='card-body' id={data.name}>
 					<p className='p-0 m-0'>Id: {data.id}</p>
 					<p className='p-0 mt-2 mb-0 mx-0'>Name: {data.name}</p>
 					<div className='mt-2 d-flex justify-content-end'>
@@ -22,7 +25,8 @@ function Authors(props) {
 							data-bs-toggle='modal'
 							data-bs-target='#updateAuthorModal'
 							id={data.id}
-							onClick={CALL_SET_CLICKED_ID}
+							name={data.name}
+							onClick={SET_CLICKED_CARD}
 						>
 							<FontAwesomeIcon icon='fa-solid fa-pen-to-square' />
 						</div>
@@ -31,13 +35,14 @@ function Authors(props) {
 							data-bs-toggle='modal'
 							data-bs-target='#deleteAuthorModal'
 							id={data.id}
-							onClick={CALL_SET_CLICKED_ID}
+							onClick={SET_CLICKED_CARD}
 						>
 							<FontAwesomeIcon icon='fa-solid fa-trash' />
 						</div>
 					</div>
 				</div>
 			</div>
+			{/* </a> */}
 		</div>
 	))
 
@@ -64,7 +69,7 @@ function Authors(props) {
 			</div>
 
 			<AddAuthorModal refetch={props.refetch} />
-			<UpdateAuthorModal id={clickedId} refetch={props.refetch} />
+			<UpdateAuthorModal name={clickedName} id={clickedId} refetch={props.refetch} />
 			<DeleteAuthorModal id={clickedId} refetch={props.refetch} />
 		</div>
 	);

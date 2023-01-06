@@ -23,15 +23,11 @@ const LANDING = (
 
 function App() {
 	return (
-		// <div>
-		// 	<Navigation navObj={navObj} />
-		// 	<Content />
-		// 	<Footer />
-		// </div>
 		<BrowserRouter>
 			<Routes>
 				<Route path='/' element={LANDING} />
-				<Route path='/books-and-authors' element={<BooksAndAuthors />} />
+				<Route path='/authors' element={<BooksAndAuthors />} />
+				{/* <Route path='/authors/:id' element={<BooksAndAuthors />} /> */}
 			</Routes>
 		</BrowserRouter>
 	);

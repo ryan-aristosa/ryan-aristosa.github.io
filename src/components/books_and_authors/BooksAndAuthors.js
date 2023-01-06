@@ -21,13 +21,13 @@ function BooksAndAuthors() {
 	if (loading) {
 		content = <div className='network d-flex justify-content-center align-items-center'>
 			<h3 className='fw-600 text-primary'>Loading...</h3>
-		</div>
+		</div>;
 	} else if (!loading && error) {
 		content = <div className='loading d-flex justify-content-center align-items-center'>
 			<h3 className='fw-600 text-danger'>{error}</h3>
-		</div>
+		</div>;
 	} else if (!loading && !error) {
-		content = <Authors response={response} refetch={refetch} />
+		content = <Authors response={response} refetch={refetch} />;
 	}
 
 	return (

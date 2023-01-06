@@ -1,3 +1,4 @@
+import { useEffect } from 'react';
 import { updateAuthorByIdAxios } from '../../apis/AuthorsAxios';
 
 function UpdateAuthorModal(props) {
@@ -17,6 +18,10 @@ function UpdateAuthorModal(props) {
 			props.refetch();
 		}, 500);
 	}
+
+    useEffect(() => {
+		document.getElementById('updateAuthorName').value = props.name;
+	});
 
     return (
         <div
