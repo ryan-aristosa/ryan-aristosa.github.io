@@ -34,7 +34,12 @@ function Project(props) {
 							</a>
 						</div>
 						<div className='w-50 ps-2'>
-							<a href={demo} rel='noreferrer' target='_blank' className='btn w-100 h-100'>
+							<a 
+								href={demo} 
+								rel='noreferrer' 
+								target='_blank' 
+								className='btn w-100 h-100'
+							>
 								Try it!
 							</a>
 						</div>
