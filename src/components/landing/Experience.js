@@ -1,11 +1,10 @@
-import '../../styles/landing/Experience.scss';
-import '../../styles/App.scss';
+import 'styles/landing/Experience.scss';
 
 function Experience(props) {
-	const TIME_CARD = (props.timelineObj).map(([side, time, details, techStack], timeIndex) => (
-		<div className={'time-card position-relative ' + side} key={timeIndex}>
+	const TIME_CARD = (props.timelineObj).map(([side, duration, details, techStack]) => (
+		<div className={'time-card position-relative ' + side} key={duration}>
 			<div className='details position-relative'>
-				<h6 className='fw-600 text-center mb-4'>{time}</h6>
+				<h6 className='fw-600 text-center mb-4'>{duration}</h6>
 				<ul className='list-unstyled'>
 					{
 						details.map((detail, detailIndex) => (

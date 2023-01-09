@@ -1,7 +1,7 @@
-import '../../styles/landing/Content.scss';
-import Experience from './Experience';
-import Home from './Home';
-import Project from './Project';
+import Experience from 'components/landing/Experience';
+import Home from 'components/landing/Home';
+import Project from 'components/landing/Project';
+import 'styles/landing/Content.scss';
 
 // Experience
 const TIMELINE_OBJ = [
@@ -13,6 +13,7 @@ const TIMELINE_OBJ = [
 			['Java', 'color-java', 'c-eb'],
 			['Spring Boot', 'color-spring-boot', 'c-eb'],
 			['Hibernate', 'color-hibernate', 'c-eb'],
+			['PostgreSQL', 'color-postgresql', 'c-eb'],
 			['React', 'color-react', 'c-dcb'],
 			['Bootstrap', 'color-bootstrap', 'c-eb']
 		]
@@ -45,14 +46,15 @@ const PROJECT_OBJ = [
 		'Spring boot CRUD application for books and authors',
 		[
 			['Java', 'color-java', 'c-eb'],
-			['Spring Boot', 'color-spring-boot', 'c-eb']
+			['Spring Boot', 'color-spring-boot', 'c-eb'],
+			['Hibernate', 'color-hibernate', 'c-eb']
 		],
 		'https://github.com/ryan-aristosa/books-and-authors',
 		'/authors'
 	],
 	[
 		'skill-and-employees',
-		'Springboot application for skills and employees with authorization and actuator',
+		'Spring boot application for skills and employees with authorization and actuator',
 		[
 			['Java', 'color-java', 'c-eb'],
 			['Spring Boot', 'color-spring-boot', 'c-eb']

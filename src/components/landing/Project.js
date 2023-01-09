@@ -1,4 +1,5 @@
-import '../../styles/landing/Project.scss';
+import AnchorButton from 'components/landing/AnchorButton';
+import 'styles/landing/Project.scss';
 
 function Project(props) {
 	const PROJECT = props.projectObj.map(([title, detail, techStack, openSource, demo]) => (
@@ -24,24 +25,10 @@ function Project(props) {
 					</div>
 					<div className='buttons mt-5 d-flex'>
 						<div className='w-50 pe-2'>
-							<a
-								href={openSource}
-								rel='noreferrer'
-								target='_blank'
-								className='btn w-100 h-100'
-							>
-								Open Source
-							</a>
+							<AnchorButton link={openSource} text='Open Source' />
 						</div>
 						<div className='w-50 ps-2'>
-							<a 
-								href={demo} 
-								rel='noreferrer' 
-								target='_blank' 
-								className='btn w-100 h-100'
-							>
-								Try it!
-							</a>
+							<AnchorButton link={demo} text='Try it!' />
 						</div>
 					</div>
 				</div>

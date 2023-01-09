@@ -1,21 +1,14 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import '../styles/App.scss';
-import BooksAndAuthors from './books_and_authors/BooksAndAuthors';
-import Content from './landing/Content';
-import Footer from './landing/Footer'
-import Navigation from './landing/Navigation.js';
-
-// Navigation
-const NAV_OBJ = {
-	home: 'fa-solid fa-house',
-	experience: 'fa-solid fa-code',
-	project: 'fa-solid fa-diagram-project'
-};
+import Content from 'components/landing/Content';
+import Footer from 'components/landing/Footer'
+import Navigation from 'components/landing/Navigation.js';
+import BooksAndAuthors from 'components/books_and_authors/BooksAndAuthors';
+import 'styles/App.scss';
 
 // Landing
 const LANDING = (
 	<div>
-		<Navigation navObj={NAV_OBJ} />
+		<Navigation />
 		<Content />
 		<Footer />
 	</div>

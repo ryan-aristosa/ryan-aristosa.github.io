@@ -2,9 +2,9 @@ import { useState, useEffect } from "react";
 
 const UseAxios = (configObj) => {
 	const {
-		axiosInstance,
-		method,
-		url,
+		axiosInstance, 
+		method, 
+		url, 
 		requestConfig = {}
 	} = configObj;
 
@@ -24,10 +24,8 @@ const UseAxios = (configObj) => {
 					...requestConfig,
 					signal: controller.signal
 				});
-				// console.log(res);
 				setResponse(res.data.content);
 			} catch (err) {
-				// console.log(err.message);
 				setError(err.message);
 			} finally {
 				setLoading(false);

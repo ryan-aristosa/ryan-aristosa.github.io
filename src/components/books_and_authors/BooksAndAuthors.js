@@ -1,9 +1,8 @@
-import React from 'react';
-import '../../styles/books_and_authors/BooksAndAuthors.scss';
-import Authors from './Authors';
-import ProjectTitle from '../project/ProjectTitle';
-import UseAxios from '../../apis/UseAxios';
-import { getAllAuthors } from '../../apis/AuthorsAxios';
+import UseAxios from 'apis/UseAxios';
+import { getAllAuthors } from 'apis/AuthorsAxios';
+import Authors from 'components/books_and_authors/Authors';
+import ProjectTitle from 'components/project/ProjectTitle';
+import 'styles/books_and_authors/BooksAndAuthors.scss';
 
 function BooksAndAuthors() {
 	const [response, error, loading, refetch] = UseAxios({
@@ -21,13 +20,13 @@ function BooksAndAuthors() {
 	if (loading) {
 		content = <div className='network d-flex justify-content-center align-items-center'>
 			<h3 className='fw-600 text-primary'>Loading...</h3>
-		</div>;
+		</div>
 	} else if (!loading && error) {
 		content = <div className='loading d-flex justify-content-center align-items-center'>
 			<h3 className='fw-600 text-danger'>{error}</h3>
-		</div>;
+		</div>
 	} else if (!loading && !error) {
-		content = <Authors response={response} refetch={refetch} />;
+		content = <Authors response={response} refetch={refetch} />
 	}
 
 	return (

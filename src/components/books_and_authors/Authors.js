@@ -1,13 +1,14 @@
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import AddAuthorModal from './AddAuthorModal';
 import { useState } from 'react';
-import UpdateAuthorModal from './UpdateAuthorModal';
-import DeleteAuthorModal from './DeleteAuthorModal';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import AddAuthorModal from 'components/books_and_authors/AddAuthorModal';
+import DeleteAuthorModal from 'components/books_and_authors/DeleteAuthorModal';
+import IconButton from 'components/books_and_authors/IconButton';
+import UpdateAuthorModal from 'components/books_and_authors/UpdateAuthorModal';
 
 function Authors(props) {
 	const [clickedId, setClickedId] = useState(0);
 	const [clickedName, setClickedName] = useState('');
-	const SET_CLICKED_CARD = event => {
+	const setClickedCard = event => {
 		setClickedId(event.currentTarget.id);
 		setClickedName(event.currentTarget.parentNode.parentNode.id);
 	};
@@ -20,25 +21,20 @@ function Authors(props) {
 					<p className='p-0 m-0'>Id: {data.id}</p>
 					<p className='p-0 mt-2 mb-0 mx-0'>Name: {data.name}</p>
 					<div className='mt-2 d-flex justify-content-end'>
-						<div
-							className='d-inline px-2 py-1 mx-1 text-primary'
-							data-bs-toggle='modal'
-							data-bs-target='#updateAuthorModal'
-							id={data.id}
-							name={data.name}
-							onClick={SET_CLICKED_CARD}
-						>
-							<FontAwesomeIcon icon='fa-solid fa-pen-to-square' />
-						</div>
-						<div
-							className='d-inline px-2 py-1 mx-1 text-danger'
-							data-bs-toggle='modal'
-							data-bs-target='#deleteAuthorModal'
-							id={data.id}
-							onClick={SET_CLICKED_CARD}
-						>
-							<FontAwesomeIcon icon='fa-solid fa-trash' />
-						</div>
+						<IconButton 
+							textColor='text-primary' 
+							modalId='#updateAuthorModal' 
+							authorId={data.id}
+							onClick={setClickedCard}
+							icon='fa-solid fa-pen-to-square'
+						/>
+						<IconButton 
+							textColor='text-danger' 
+							modalId='#deleteAuthorModal' 
+							authorId={data.id}
+							onClick={setClickedCard}
+							icon='fa-solid fa-trash'
+						/>
 					</div>
 				</div>
 			</div>
@@ -69,7 +65,20 @@ function Authors(props) {
 			</div>
 
 			<AddAuthorModal refetch={props.refetch} />
+			{/* <AuthorModal 
+				modalId='addAuthorModal' 
+				modalTitle='Add Title' 
+				buttonName='Add' 
+				inputFieldId='addAuthorName' 
+				method='post' 
+				refetch={props.refetch}
+			/> */}
 			<UpdateAuthorModal name={clickedName} id={clickedId} refetch={props.refetch} />
+			{/* <AuthorModal 
+				modalId='updateAuthorModal' 
+				modalTitle='Update Title' 
+				buttonName='Update' 
+			/> */}
 			<DeleteAuthorModal id={clickedId} refetch={props.refetch} />
 		</div>
 	);
