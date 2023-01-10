@@ -1,7 +1,7 @@
 import { authorBaseUrl } from 'apis/AuthorsAxios';
-import AuthorModal from 'components/books_and_authors/AuthorModal';
+import ActionModal from 'components/books_and_authors/ActionModal';
 
-function DeleteAuthorModal(props) {
+function DeleteAuthor(props) {
 	function deleteAuthor() {
 		const deleteRequest = {
 			method: 'delete',
@@ -21,13 +21,14 @@ function DeleteAuthorModal(props) {
 	}
 
 	return (
-		<AuthorModal
-			modalId='deleteAuthorModal'
+		<ActionModal
+			modalId='deleteModal'
 			modalTitle='Delete Author'
 			doAction={deleteAuthor}
 			buttonName='Delete'
+			type='author'
 		/>
 	);
 }
 
-export default DeleteAuthorModal;
+export default DeleteAuthor;

@@ -1,7 +1,7 @@
 import { authorBaseUrl } from 'apis/AuthorsAxios';
-import AuthorModal from 'components/books_and_authors/AuthorModal';
+import ActionModal from 'components/books_and_authors/ActionModal';
 
-function AddAuthorModal(props) {
+function AddAuthor(props) {
 	function addAuthor() {
 		const author = {
 			name: document.getElementById('addAuthorName').value
@@ -23,14 +23,15 @@ function AddAuthorModal(props) {
 	}
 
 	return (
-		<AuthorModal 
-			modalId='addAuthorModal' 
+		<ActionModal 
+			modalId='addModal' 
 			modalTitle='Add Author' 
 			doAction={addAuthor} 
 			buttonName='Add'
+			type='author'
 			inputFieldId='addAuthorName'
 		/>
 	);
 }
 
-export default AddAuthorModal;
+export default AddAuthor;

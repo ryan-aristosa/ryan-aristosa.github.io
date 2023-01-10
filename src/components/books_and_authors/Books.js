@@ -1,19 +1,12 @@
 import UseAxios from 'apis/UseAxios';
 import { getAllAuthors } from 'apis/AuthorsAxios';
-import AuthorsContent from 'components/books_and_authors/AuthorsContent';
+import AuthorsContent from 'components/books_and_authors/BooksAndAuthorsContent';
 import ProjectTitle from 'components/project/ProjectTitle';
 import 'styles/books_and_authors/BooksAndAuthors.scss';
 
-function BooksAndAuthors(props) {
-	let axiosInstanceVar;
-	let content;
-	
-	if (props.type === 'authors') {
-		axiosInstanceVar = getAllAuthors;
-	}
-
+function Books() {
 	const [response, error, loading, refetch] = UseAxios({
-		axiosInstance: axiosInstanceVar,
+		axiosInstance: getAllAuthors,
 		method: 'GET',
 		url: '/',
 		requestConfig: {
@@ -22,6 +15,7 @@ function BooksAndAuthors(props) {
 			}
 		}
 	});
+	let content;
 
 	if (loading) {
 		content = <div className='network d-flex justify-content-center align-items-center'>
@@ -31,16 +25,16 @@ function BooksAndAuthors(props) {
 		content = <div className='loading d-flex justify-content-center align-items-center'>
 			<h3 className='fw-600 text-danger'>{error}</h3>
 		</div>
-	} else if (!loading && !error && props.type === 'authors') {
+	} else if (!loading && !error) {
 		content = <AuthorsContent response={response} refetch={refetch} />
 	}
 
 	return (
-		<div className='books-and-authors'>
+		<div className='authors'>
 			<ProjectTitle title='Books and Authors' />
-			{content}
+			{/* {content} */}
 		</div>
 	);
 }
 
-export default BooksAndAuthors;
+export default Books;

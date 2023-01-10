@@ -1,8 +1,8 @@
 import { useEffect } from 'react';
 import { authorBaseUrlWithId } from 'apis/AuthorsAxios';
-import AuthorModal from 'components/books_and_authors/AuthorModal';
+import ActionModal from 'components/books_and_authors/ActionModal';
 
-function UpdateAuthorModal(props) {
+function UpdateAuthor(props) {
 	useEffect(() => {
 		document.getElementById('updateAuthorName').value = props.name;
 	});
@@ -29,14 +29,15 @@ function UpdateAuthorModal(props) {
 	}
 
 	return (
-		<AuthorModal
-			modalId='updateAuthorModal'
+		<ActionModal
+			modalId='updateModal'
 			modalTitle='Update Author'
 			doAction={updateAuthor}
 			buttonName='Update'
+			type='author'
 			inputFieldId='updateAuthorName'
 		/>
 	);
 }
 
-export default UpdateAuthorModal;
+export default UpdateAuthor;

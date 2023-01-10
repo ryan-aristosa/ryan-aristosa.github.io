@@ -1,12 +1,15 @@
-function AuthorModal(props) {
+function ActionModal(props) {
 	let modalBody;
 
-	if (props.modalId === 'addAuthorModal' || props.modalId === 'updateAuthorModal') {
+	if (
+		(props.modalId === 'addModal' && props.type === 'author') 
+		|| (props.modalId === 'updateModal' && props.type === 'author')
+	) {
 		modalBody = <div className='modal-body'>
 			<label htmlFor='authorName'>Name:</label>
 			<input type='text' className='form-control' id={props.inputFieldId} />
 		</div>
-	} else if (props.modalId === 'deleteAuthorModal') {
+	} else if (props.modalId === 'deleteModal' && props.type === 'author') {
 		modalBody = <div className='modal-body'>
 			Action cannot be undone. Continue delete?
 		</div>
@@ -57,4 +60,4 @@ function AuthorModal(props) {
 	);
 }
 
-export default AuthorModal;
+export default ActionModal;
