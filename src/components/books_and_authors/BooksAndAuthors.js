@@ -1,21 +1,26 @@
+import { useParams } from 'react-router-dom';
 import UseAxios from 'apis/UseAxios';
-import { getAllAuthors } from 'apis/AuthorsAxios';
+import { getAllAuthors, getAllBooks } from 'apis/BooksAndAuthorsAxios';
 import AuthorsContent from 'components/books_and_authors/AuthorsContent';
+import BooksContent from 'components/books_and_authors/BooksContent';
 import ProjectTitle from 'components/project/ProjectTitle';
 import 'styles/books_and_authors/BooksAndAuthors.scss';
 
 function BooksAndAuthors(props) {
-	let axiosInstanceVar;
-	let content;
+	const params = useParams();
+	let axiosInstanceVar, url, content;
 	
 	if (props.type === 'authors') {
 		axiosInstanceVar = getAllAuthors;
+	} else if (props.type === 'books') {
+		axiosInstanceVar = getAllBooks;
+		url = '/' + params.id + '/books/';
 	}
 
 	const [response, error, loading, refetch] = UseAxios({
 		axiosInstance: axiosInstanceVar,
 		method: 'GET',
-		url: '/',
+		url: url,
 		requestConfig: {
 			headers: {
 				'Content-Language': 'en-US'
@@ -33,6 +38,8 @@ function BooksAndAuthors(props) {
 		</div>
 	} else if (!loading && !error && props.type === 'authors') {
 		content = <AuthorsContent response={response} refetch={refetch} />
+	} else if (!loading && !error && props.type === 'books') {
+		content = <BooksContent params={params} response={response} refetch={refetch} />
 	}
 
 	return (

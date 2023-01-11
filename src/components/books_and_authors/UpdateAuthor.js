@@ -1,5 +1,5 @@
 import { useEffect } from 'react';
-import { authorBaseUrlWithId } from 'apis/AuthorsAxios';
+import { authorBaseUrlWithId } from 'apis/BooksAndAuthorsAxios';
 import ActionModal from 'components/books_and_authors/ActionModal';
 
 function UpdateAuthor(props) {
@@ -16,8 +16,8 @@ function UpdateAuthor(props) {
 			headers: {
 				'Content-Type': 'application/json'
 			},
-			data: author,
-			id: props.id
+			id: props.id,
+			data: author
 		};
 
 		authorBaseUrlWithId(updateRequest);
@@ -35,7 +35,7 @@ function UpdateAuthor(props) {
 			doAction={updateAuthor}
 			buttonName='Update'
 			type='author'
-			inputFieldId='updateAuthorName'
+			authorInputId='updateAuthorName'
 		/>
 	);
 }

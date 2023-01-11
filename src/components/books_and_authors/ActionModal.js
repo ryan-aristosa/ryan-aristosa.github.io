@@ -6,12 +6,22 @@ function ActionModal(props) {
 		|| (props.modalId === 'updateModal' && props.type === 'author')
 	) {
 		modalBody = <div className='modal-body'>
-			<label htmlFor='authorName'>Name:</label>
-			<input type='text' className='form-control' id={props.inputFieldId} />
+			<label htmlFor={props.authorInputId}>Name:</label>
+			<input type='text' className='form-control' id={props.authorInputId} />
 		</div>
 	} else if (props.modalId === 'deleteModal' && props.type === 'author') {
 		modalBody = <div className='modal-body'>
 			Action cannot be undone. Continue delete?
+		</div>
+	} else if (
+		(props.modalId === 'addModal' && props.type === 'book') 
+		|| (props.modalId === 'updateModal' && props.type === 'book')
+	) {
+		modalBody = <div className='modal-body'>
+			<label htmlFor={props.titleInputId}>Title:</label>
+			<input type='text' className='form-control' id={props.titleInputId} />
+			<label htmlFor={props.descriptionInputId} className='mt-3'>Description:</label>
+			<input type='text' className='form-control' id={props.descriptionInputId} />
 		</div>
 	}
 

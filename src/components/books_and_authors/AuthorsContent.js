@@ -8,25 +8,19 @@ import UpdateAuthor from 'components/books_and_authors/UpdateAuthor';
 function AuthorsContent(props) {
 	const [clickedId, setClickedId] = useState(0);
 	const [clickedName, setClickedName] = useState('');
-	// const setClickedCard = event => {
-	// 	setClickedId(event.currentTarget.id);
-	// 	setClickedName(event.currentTarget.parentNode.parentNode.id);
-	// 	console.log(clickedId)
-	// };
 
 	const CARDS = props.response.map((data) => (
 		<div className='card-container d-flex' key={data.id}>
-			{/* <a href={'/authors/' + data.id} className='w-100'> */}
-				<DataCard 
-					name={data.name} 
-					id={data.id} 
-					setClickedId={() => { setClickedId(data.id) }} 
-					setClickedCard={() => {
-						setClickedId(data.id);
-						setClickedName(data.name);
-					}}
-				/>
-			{/* </a> */}
+			<DataCard
+				type='author'
+				id={data.id}
+				name={data.name}
+				setClickedCard={() => {
+					setClickedId(data.id);
+					setClickedName(data.name);
+				}}
+				setClickedId={() => { setClickedId(data.id) }}
+			/>
 		</div>
 	))
 

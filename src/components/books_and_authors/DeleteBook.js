@@ -1,10 +1,12 @@
-import { authorBaseUrl } from 'apis/BooksAndAuthorsAxios';
+import { bookBaseUrl } from 'apis/BooksAndAuthorsAxios';
 import ActionModal from 'components/books_and_authors/ActionModal';
 
-function DeleteAuthor(props) {
-	function deleteAuthor() {
+function DeleteBook(props) {
+	function deleteBook() {
+		const url = '/' + props.params.id + '/books';
 		const deleteRequest = {
 			method: 'delete',
+			url: url,
 			headers: {
 				'Content-Type': 'application/json'
 			},
@@ -13,7 +15,7 @@ function DeleteAuthor(props) {
 			}
 		};
 
-		authorBaseUrl(deleteRequest);
+		bookBaseUrl(deleteRequest);
 
 		setTimeout(function () {
 			props.refetch();
@@ -23,12 +25,12 @@ function DeleteAuthor(props) {
 	return (
 		<ActionModal
 			modalId='deleteModal'
-			modalTitle='Delete Author'
-			doAction={deleteAuthor}
+			modalTitle='Delete Book'
+			doAction={deleteBook}
 			buttonName='Delete'
-			type='author'
+			type='book'
 		/>
 	);
 }
 
-export default DeleteAuthor;
+export default DeleteBook;

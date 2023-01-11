@@ -20,7 +20,7 @@ function App() {
 			<Routes>
 				<Route path='/' element={LANDING} />
 				<Route path='/authors' element={<BooksAndAuthors type='authors' />} />
-				{/* <Route path='/authors/:id' element={BOOKS} /> */}
+				<Route path='/authors/:id/books' element={<BooksAndAuthors type='books' />} />
 			</Routes>
 		</BrowserRouter>
 	);
