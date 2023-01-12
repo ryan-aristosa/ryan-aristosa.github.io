@@ -24,7 +24,7 @@ function DataCard(props) {
 			<IconButton
 				textColor='text-danger'
 				modalId='#deleteModal'
-				onClick={props.setClickedId}
+				onClick={props.setClickedCard}
 				icon='fa-solid fa-trash'
 			/>
 		</div>

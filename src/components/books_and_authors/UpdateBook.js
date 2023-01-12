@@ -1,6 +1,7 @@
 import { useEffect } from 'react';
 import { bookBaseUrlWithId } from 'apis/BooksAndAuthorsAxios';
 import ActionModal from 'components/books_and_authors/ActionModal';
+import BookInput from 'components/books_and_authors/BookInput';
 
 function UpdateBook(props) {
 	useEffect(() => {
@@ -37,11 +38,11 @@ function UpdateBook(props) {
 		<ActionModal
 			modalId='updateModal'
 			modalTitle='Update Book'
+			modalBody={
+				<BookInput titleInputId='updateTitle' descriptionInputId='updateDescription' />
+			}
 			doAction={updateBook}
 			buttonName='Update'
-			type='book'
-			titleInputId='updateTitle'
-			descriptionInputId='updateDescription'
 		/>
 	);
 }

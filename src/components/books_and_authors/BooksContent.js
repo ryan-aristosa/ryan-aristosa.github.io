@@ -53,7 +53,13 @@ function BooksContent(props) {
 				id={clickedId}
 				refetch={props.refetch}
 			/>
-			<DeleteBook params={props.params} id={clickedId} refetch={props.refetch} />
+			<DeleteBook
+				params={props.params}
+				title={clickedTitle}
+				description={clickedDescription}
+				id={clickedId}
+				refetch={props.refetch}
+			/>
 		</div>
 	);
 }

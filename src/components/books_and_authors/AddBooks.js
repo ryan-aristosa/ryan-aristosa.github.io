@@ -1,5 +1,6 @@
 import { bookBaseUrl } from 'apis/BooksAndAuthorsAxios';
 import ActionModal from 'components/books_and_authors/ActionModal';
+import BookInput from 'components/books_and_authors/BookInput';
 
 function AddBooks(props) {
 	function addBook() {
@@ -27,14 +28,12 @@ function AddBooks(props) {
 	}
 
 	return (
-		<ActionModal 
-			modalId='addModal' 
-			modalTitle='Add Book' 
-			doAction={addBook} 
+		<ActionModal
+			modalId='addModal'
+			modalTitle='Add Book'
+			modalBody={<BookInput titleInputId='addTitle' descriptionInputId='addDescription' />}
+			doAction={addBook}
 			buttonName='Add'
-			type='book'
-			titleInputId='addTitle'
-			descriptionInputId='addDescription'
 		/>
 	);
 }

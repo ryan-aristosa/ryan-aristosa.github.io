@@ -2,6 +2,11 @@ import { authorBaseUrl } from 'apis/BooksAndAuthorsAxios';
 import ActionModal from 'components/books_and_authors/ActionModal';
 
 function DeleteAuthor(props) {
+	const modalBody = <div className='modal-body'>
+		Action cannot be undone. Continue delete? <br />
+		Author: {props.name}
+	</div>
+	
 	function deleteAuthor() {
 		const deleteRequest = {
 			method: 'delete',
@@ -24,9 +29,9 @@ function DeleteAuthor(props) {
 		<ActionModal
 			modalId='deleteModal'
 			modalTitle='Delete Author'
+			modalBody={modalBody}
 			doAction={deleteAuthor}
 			buttonName='Delete'
-			type='author'
 		/>
 	);
 }

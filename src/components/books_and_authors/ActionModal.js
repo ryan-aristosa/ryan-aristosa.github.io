@@ -1,30 +1,4 @@
 function ActionModal(props) {
-	let modalBody;
-
-	if (
-		(props.modalId === 'addModal' && props.type === 'author') 
-		|| (props.modalId === 'updateModal' && props.type === 'author')
-	) {
-		modalBody = <div className='modal-body'>
-			<label htmlFor={props.authorInputId}>Name:</label>
-			<input type='text' className='form-control' id={props.authorInputId} />
-		</div>
-	} else if (props.modalId === 'deleteModal' && props.type === 'author') {
-		modalBody = <div className='modal-body'>
-			Action cannot be undone. Continue delete?
-		</div>
-	} else if (
-		(props.modalId === 'addModal' && props.type === 'book') 
-		|| (props.modalId === 'updateModal' && props.type === 'book')
-	) {
-		modalBody = <div className='modal-body'>
-			<label htmlFor={props.titleInputId}>Title:</label>
-			<input type='text' className='form-control' id={props.titleInputId} />
-			<label htmlFor={props.descriptionInputId} className='mt-3'>Description:</label>
-			<input type='text' className='form-control' id={props.descriptionInputId} />
-		</div>
-	}
-
 	return (
 		<div
 			className='modal fade'
@@ -48,7 +22,7 @@ function ActionModal(props) {
 							aria-label='Close'
 						></button>
 					</div>
-					{modalBody}
+					{props.modalBody}
 					<div className='modal-footer'>
 						<button
 							type='button'

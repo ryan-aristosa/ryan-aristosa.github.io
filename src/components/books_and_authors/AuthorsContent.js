@@ -19,7 +19,6 @@ function AuthorsContent(props) {
 					setClickedId(data.id);
 					setClickedName(data.name);
 				}}
-				setClickedId={() => { setClickedId(data.id) }}
 			/>
 		</div>
 	))
@@ -35,8 +34,8 @@ function AuthorsContent(props) {
 			</div>
 
 			<AddAuthor refetch={props.refetch} />
-			<UpdateAuthor name={clickedName} id={clickedId} refetch={props.refetch} />
-			<DeleteAuthor id={clickedId} refetch={props.refetch} />
+			<UpdateAuthor id={clickedId} name={clickedName} refetch={props.refetch} />
+			<DeleteAuthor id={clickedId} name={clickedName} refetch={props.refetch} />
 		</div>
 	);
 }
