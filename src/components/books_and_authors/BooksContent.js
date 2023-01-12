@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import AddBooks from 'components/books_and_authors/AddBooks';
 import AddCard from 'components/books_and_authors/AddCard';
 import DataCard from 'components/books_and_authors/DataCard';
@@ -30,7 +31,14 @@ function BooksContent(props) {
 	return (
 		<div>
 			<div className='mw-1200 my-5 mx-auto py-5 px-3'>
-				<h3 className='text-center'>Books</h3>
+				<div className='text-center position-relative'>
+					<a href='/authors'>
+						<h4 className='c-dcb position-absolute mt-1'>
+							<FontAwesomeIcon icon='fa-solid fa-arrow-left' />
+						</h4>
+					</a>
+					<h3>Books</h3>
+				</div>
 				<div className='d-flex justify-content-center flex-wrap mt-5 w-100'>
 					<AddCard />
 					{CARDS}
@@ -38,11 +46,11 @@ function BooksContent(props) {
 			</div>
 
 			<AddBooks params={props.params} refetch={props.refetch} />
-			<UpdateBook 
-				params={props.params} 
-				title={clickedTitle} 
-				description={clickedDescription} 
-				id={clickedId} 
+			<UpdateBook
+				params={props.params}
+				title={clickedTitle}
+				description={clickedDescription}
+				id={clickedId}
 				refetch={props.refetch}
 			/>
 			<DeleteBook params={props.params} id={clickedId} refetch={props.refetch} />
