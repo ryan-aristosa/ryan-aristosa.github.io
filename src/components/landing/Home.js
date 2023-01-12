@@ -1,5 +1,5 @@
-import '../../styles/landing/Home.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import 'styles/landing/Home.scss';
 
 function Home() {
 	return(
