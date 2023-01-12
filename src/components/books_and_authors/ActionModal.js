@@ -1,3 +1,5 @@
+import 'styles/books_and_authors/ActionModal.scss';
+
 function ActionModal(props) {
 	return (
 		<div
@@ -9,7 +11,7 @@ function ActionModal(props) {
 			aria-labelledby='staticBackdropLabel'
 			aria-hidden='true'
 		>
-			<div className='modal-dialog'>
+			<div className='modal-dialog d-flex align-items-center'>
 				<div className='modal-content'>
 					<div className='modal-header'>
 						<h1 className='modal-title fs-5' id='staticBackdropLabel'>
