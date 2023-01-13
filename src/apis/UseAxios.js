@@ -35,6 +35,8 @@ const UseAxios = (configObj) => {
 		fetchData();
 
 		return () => controller.abort();
+		
+		// eslint-disable-next-line
 	}, [reload]);
 
 	return [response, error, loading, refetch];
