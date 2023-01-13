@@ -1,7 +1,7 @@
 {
   "name": "ryan-aristosa.github.io",
   "version": "0.1.0",
-  "homepage": "https://github.com/ryan-aristosa/ryan-aristosa.github.io",
+  "homepage": "https://ryan-aristosa.github.io/",
   "private": true,
   "dependencies": {
     "@fortawesome/react-fontawesome": "^0.2.0",
