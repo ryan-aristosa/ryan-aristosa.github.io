@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/ryan-aristosa/ryan-aristosa.github.io/static/css/main.61dd9421.css",
+    "main.js": "/ryan-aristosa/ryan-aristosa.github.io/static/js/main.216206bb.js",
+    "static/js/787.e196b8dc.chunk.js": "/ryan-aristosa/ryan-aristosa.github.io/static/js/787.e196b8dc.chunk.js",
+    "index.html": "/ryan-aristosa/ryan-aristosa.github.io/index.html",
+    "main.61dd9421.css.map": "/ryan-aristosa/ryan-aristosa.github.io/static/css/main.61dd9421.css.map",
+    "main.216206bb.js.map": "/ryan-aristosa/ryan-aristosa.github.io/static/js/main.216206bb.js.map",
+    "787.e196b8dc.chunk.js.map": "/ryan-aristosa/ryan-aristosa.github.io/static/js/787.e196b8dc.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.61dd9421.css",
+    "static/js/main.216206bb.js"
+  ]
+}
