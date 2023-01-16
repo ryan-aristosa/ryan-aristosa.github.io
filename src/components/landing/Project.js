@@ -14,7 +14,7 @@ function Project(props) {
 								techStack.map(([stack, bgColor, color]) => (
 									<div
 										className={bgColor + ' ' + color +
-											' d-inline-block py-2 px-3 me-2 mt-2'}
+											' d-inline-block py-1 px-3 me-2 mt-2'}
 										key={stack}
 									>
 										{stack}
@@ -25,7 +25,7 @@ function Project(props) {
 					</div>
 					<div className='buttons mt-5 d-flex'>
 						<div className='w-50 pe-2'>
-							<AnchorButton link={openSource} text='Open Source' />
+							<AnchorButton link={openSource} text='Open-source' />
 						</div>
 						<div className='w-50 ps-2'>
 							<AnchorButton link={demo} text='Try it!' />

@@ -1,3 +1,4 @@
+import About from 'components/landing/About';
 import Experience from 'components/landing/Experience';
 import Home from 'components/landing/Home';
 import Project from 'components/landing/Project';
@@ -78,6 +79,7 @@ function Content() {
 	return (
 		<div className='content'>
 			<Home />
+			<About />
 			<Experience timelineObj={TIMELINE_OBJ} />
 			<Project projectObj={PROJECT_OBJ} />
 		</div>

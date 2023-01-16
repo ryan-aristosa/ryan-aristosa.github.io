@@ -1,0 +1,42 @@
+$color-medium-light-cyan-blue: #7DC8F8;
+$color-earthborn-bugle: #F7F7F7;
+$color-orange: #F28123;
+
+.about-me {
+	.mw-1200 {
+		padding-bottom: 120px;
+		padding-top: 120px;
+
+		.about-container {
+			border-radius: 15px;
+			box-shadow: 10px 10px 20px 0px rgba(0, 0, 0, 0.2);
+			max-width: 768px;
+
+			.head {
+				.profile {
+					background-color: $color-medium-light-cyan-blue;
+					border-radius: 50%;
+					height: 50px;
+					width: 50px;
+				}
+
+				p:nth-child(2) {
+					font-size: 14px;
+				}
+			}
+		}
+
+		.btn-container {
+			.btn {
+				background-color: $color-earthborn-bugle;
+				border: 2px solid $color-orange;
+				color: $color-orange;
+			}
+
+			.btn:hover {
+				background-color: $color-orange;
+				color: $color-earthborn-bugle;
+			}
+		}
+	}
+}

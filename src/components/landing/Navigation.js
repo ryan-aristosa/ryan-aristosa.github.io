@@ -6,6 +6,7 @@ import 'styles/landing/Navigation.scss';
 function Navigation() {
 	const NAV_OBJ = {
 		'home': 'fa-solid fa-house',
+		'about': 'fa-solid fa-address-card',
 		'experience': 'fa-solid fa-code',
 		'project': 'fa-solid fa-diagram-project'
 	};
@@ -44,7 +45,7 @@ function Navigation() {
 		<nav className='bc-dcb position-fixed w-100'>
 			<div className='mw-1200 h-100 w-100 my-0 mx-auto d-flex'>
 				<div className='logo-container h-100'>
-					<a href='https://rynrsts.github.io/'>
+					<a href='https://ryan-aristosa.github.io/'>
 						<img src={logoReversed} alt='Logo (white)' className='h-100' />
 					</a>
 				</div>

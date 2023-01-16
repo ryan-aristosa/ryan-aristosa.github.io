@@ -1,7 +1,24 @@
 $color-earthborn-bugle: #F7F7F7;
+$color-dark-cyan-blue: #373D48;
 
 footer {
-    a:hover {
-        color: $color-earthborn-bugle;
-    }
+	.links {
+		.fab-wrapper {
+			background-color: $color-earthborn-bugle;
+			border-radius: 50%;
+			font-size: 25px;
+			height: 50px;
+			width: 50px;
+		}
+
+		.fab-wrapper:hover {
+			color: $color-dark-cyan-blue;
+		}
+	}
+
+	.copyright {
+		a:hover {
+			color: $color-earthborn-bugle;
+		}
+	}
 }
