@@ -25,7 +25,7 @@ function About() {
 				<div className='about-container mt-5 mx-auto p-4'>
 					<div className='head d-flex align-items-center'>
 						<div className='profile'>
-							<img src={logo} className='h-100 w-100 p-2' />
+							<img src={logo} alt='Profile' className='h-100 w-100 p-2' />
 						</div>
 						<div className='ms-4'>
 							<p className='fw-600 m-0 p-0'>Ryan Aristosa</p>
