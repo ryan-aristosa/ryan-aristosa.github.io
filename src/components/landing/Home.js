@@ -1,6 +1,22 @@
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import 'styles/landing/Home.scss';
 
 function Home() {
+	function downloadCV() {
+		const fileName = 'CV - Ryan Aristosa.pdf';
+
+		fetch(fileName).then(response => {
+			response.blob().then(blob => {
+				const fileURL = window.URL.createObjectURL(blob);
+				let alink = document.createElement('a');
+
+				alink.href = fileURL;
+				alink.download = fileName;
+				alink.click();
+			})
+		});
+	}
+
 	return (
 		<div className='home d-flex align-items-center position-relative overflow-hidden'>
 			<div className='mw-1200 my-0 mx-auto text-center px-3 '>
@@ -9,6 +25,12 @@ function Home() {
 				<p className='p-0 mx-0 mb-0 mt-5 position-relative'>
 					Jr. Software Engineer at Cognizant Softvision
 				</p>
+				<div className='btn-container mt-5 d-flex justify-content-center'>
+					<button className='btn' onClick={downloadCV}>
+						Download CV &nbsp;
+						<FontAwesomeIcon icon='fa-solid fa-download' />
+					</button>
+				</div>
 			</div>
 		</div>
 	);

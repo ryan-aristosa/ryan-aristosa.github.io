@@ -1,41 +1,48 @@
-$color-medium-light-cyan-blue: #7DC8F8;
 $color-earthborn-bugle: #F7F7F7;
 $color-orange: #F28123;
+$color-medium-dark-cyan: #007BB5;
 
 .about-me {
 	.mw-1200 {
 		padding-bottom: 120px;
 		padding-top: 120px;
 
-		.about-container {
+		.tweet-container {
 			border-radius: 15px;
 			box-shadow: 10px 10px 20px 0px rgba(0, 0, 0, 0.2);
-			max-width: 768px;
+			max-width: 576px;
 
 			.head {
 				.profile {
-					background-color: $color-medium-light-cyan-blue;
+					background-color: $color-medium-dark-cyan;
 					border-radius: 50%;
 					height: 50px;
 					width: 50px;
+
+					img {
+						padding: 9px;
+					}
 				}
 
-				p:nth-child(2) {
-					font-size: 14px;
+				.ellipsis {
+					right: 0;
+					top: 0;
 				}
 			}
-		}
 
-		.btn-container {
-			.btn {
-				background-color: $color-earthborn-bugle;
-				border: 2px solid $color-orange;
-				color: $color-orange;
-			}
+			.bottom {
+				.heart {
+					cursor: pointer;
 
-			.btn:hover {
-				background-color: $color-orange;
-				color: $color-earthborn-bugle;
+					.heart-icon {
+						font-size: 20px;
+					}
+				}
+
+				.now {
+					right: 0;
+					top: 5px;
+				}
 			}
 		}
 	}

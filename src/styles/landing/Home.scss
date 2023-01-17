@@ -13,6 +13,19 @@ $color-orange: #F28123;
 			font-weight: 900;
 			letter-spacing: 2px;
 		}
+
+		.btn-container {
+			.btn {
+				background-color: $color-earthborn-bugle;
+				border: 2px solid $color-orange;
+				color: $color-orange;
+			}
+
+			.btn:hover {
+				background-color: $color-orange;
+				color: $color-earthborn-bugle;
+			}
+		}
 	}
 
 	@keyframes slideInUp {
