@@ -5,11 +5,24 @@ $color-orange: #F28123;
 	height: calc(100vh - 64px);
 
 	.mw-1200 {
+		animation: 1s ease-out 0s 1 slideInUp;
+
 		h1 {
 			color: $color-orange;
 			font-size: 45px;
 			font-weight: 900;
 			letter-spacing: 2px;
+		}
+	}
+
+	@keyframes slideInUp {
+		0% {
+			transform: translateY(100%);
+		}
+
+		100% {
+			transform: translateY(0);
+			opacity: 1;
 		}
 	}
 }
