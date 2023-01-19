@@ -17,7 +17,7 @@ function Project(props) {
 						<div className='tech-stack p-0 mx-0 mb-0 mt-4'>
 							{
 								techStack.map(([stack, bgColor, color]) => (
-									<div className='d-inline-block'>
+									<div className='d-inline-block' key={stack}>
 										<TechStackTag bgColor={bgColor} color={color} stack={stack} />
 									</div>
 								))

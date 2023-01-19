@@ -3,6 +3,10 @@ $color-dark-cyan-blue: #373D48;
 
 footer {
 	.links {
+		div {
+			cursor: pointer;
+		}
+
 		.fab-wrapper {
 			background-color: $color-earthborn-bugle;
 			border-radius: 50%;

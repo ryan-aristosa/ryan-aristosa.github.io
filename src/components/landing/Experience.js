@@ -23,7 +23,7 @@ function Experience(props) {
 						<div className='p-0 m-0 mt-2'>
 							{
 								techStack.map(([stack, bgColor, color]) => (
-									<div className='d-inline-block'>
+									<div className='d-inline-block' key={stack}>
 										<TechStackTag bgColor={bgColor} color={color} stack={stack} />
 									</div>
 								))

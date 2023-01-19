@@ -28,6 +28,7 @@ function Footer() {
 							target='_blank'
 							className='fab-wrapper c-dcb d-flex align-items-center 
 						justify-content-center mx-2'
+							key={ariaLabel}
 						>
 							<FontAwesomeIcon icon={icon} />
 						</a>
