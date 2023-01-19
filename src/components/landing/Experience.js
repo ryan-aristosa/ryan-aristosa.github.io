@@ -1,8 +1,15 @@
+import ScrollAnimation from 'react-animate-on-scroll';
 import 'styles/landing/Experience.scss';
 
 function Experience(props) {
 	const TIME_CARD = (props.timelineObj).map(([side, duration, details, techStack]) => (
-		<div className={'time-card position-relative ' + side} key={duration}>
+		<ScrollAnimation
+			animateIn='animate__fadeInUp'
+			animateOnce={true}
+			delay={500}
+			className={'time-card position-relative ' + side}
+			key={duration}
+		>
 			<div className='details position-relative'>
 				<h6 className='fw-600 text-center mb-4'>{duration}</h6>
 				<ul className='list-unstyled'>
@@ -28,7 +35,7 @@ function Experience(props) {
 					</li>
 				</ul>
 			</div>
-		</div>
+		</ScrollAnimation>
 	));
 
 	return (

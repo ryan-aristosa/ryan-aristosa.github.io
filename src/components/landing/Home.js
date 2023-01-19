@@ -1,4 +1,5 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import ScrollAnimation from 'react-animate-on-scroll';
 import 'styles/landing/Home.scss';
 
 function Home() {
@@ -18,7 +19,12 @@ function Home() {
 	}
 
 	return (
-		<div className='home d-flex align-items-center position-relative overflow-hidden'>
+		<ScrollAnimation
+			animateIn='animate__zoomIn'
+			animateOnce={true}
+			delay={500}
+			className='home d-flex align-items-center position-relative overflow-hidden'
+		>
 			<div className='mw-1200 my-0 mx-auto text-center px-3 '>
 				<h4 className='fw-600 p-0 mx-0 position-relative'>Hi, I am</h4>
 				<h1 className='p-0 m-0 mb-0 mt-4 position-relative'>Ryan Aristosa</h1>
@@ -32,7 +38,7 @@ function Home() {
 					</button>
 				</div>
 			</div>
-		</div>
+		</ScrollAnimation>
 	);
 }
 

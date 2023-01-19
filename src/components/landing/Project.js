@@ -1,10 +1,18 @@
+import { useState } from 'react';
+import ScrollAnimation from 'react-animate-on-scroll';
 import AnchorButton from 'components/landing/AnchorButton';
 import 'styles/landing/Project.scss';
 
 function Project(props) {
+	const [delay, setDeley] = useState(500);
+
 	const PROJECT = props.projectObj.map(([title, detail, techStack, openSource, demo]) => (
 		<div className='card-container d-flex' key={title}>
-			<div className='c-eb card w-100 border-0 rounded m-2 p-2'>
+			<ScrollAnimation
+				animateIn='animate__fadeIn'
+				animateOnce={true}
+				delay={500}
+				className='c-eb card w-100 border-0 rounded m-2 p-2'>
 				<div className='card-body d-flex flex-column justify-content-between'>
 					<div>
 						<h6 className='fw-600'>{title}</h6>
@@ -32,7 +40,8 @@ function Project(props) {
 						</div>
 					</div>
 				</div>
-			</div>
+			</ScrollAnimation>
+			{/* {setDeley(delay + 500)} */}
 		</div>
 	));
 
