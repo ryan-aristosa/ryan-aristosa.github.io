@@ -3,14 +3,22 @@ import 'styles/landing/Footer.scss'
 
 function Footer() {
 	const SOCIAL_OBJ = [
-		['https://github.com/ryan-aristosa', 'GitHub', 'fa-brands fa-github'],
 		['https://www.linkedin.com/in/rynrsts/', 'LinkedIn', 'fa-brands fa-linkedin-in'],
 		['mailto: ryan.aristosa@softvision.com', 'Email', 'fa-solid fa-envelope']
 	];
 
+
 	return (
 		<footer className='bc-dcb c-eb text-center py-5'>
 			<div className='links d-flex justify-content-center'>
+				<div
+					className='fab-wrapper c-dcb d-flex align-items-center 
+						justify-content-center mx-2'
+					data-bs-toggle='modal'
+					data-bs-target='#githubLink'
+				>
+					<FontAwesomeIcon icon='fa-brands fa-github' />
+				</div>
 				{
 					SOCIAL_OBJ.map(([href, ariaLabel, icon]) => (
 						<a
