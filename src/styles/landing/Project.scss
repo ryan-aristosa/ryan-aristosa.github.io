@@ -24,17 +24,15 @@ $color-dark-cyan-blue: #373D48;
 							}
 						}
 
-						.buttons {
-							div {
-								a {
-									border: 1px solid $color-earthborn-bugle;
-									color: $color-earthborn-bugle;
-								}
-								
-								a:hover {
-									background-color: $color-earthborn-bugle;
-									color: $color-dark-cyan-blue;
-								}
+						.button-container {
+							a {
+								border: 1px solid $color-earthborn-bugle;
+								color: $color-earthborn-bugle;
+							}
+
+							a:hover {
+								background-color: $color-earthborn-bugle;
+								color: $color-dark-cyan-blue;
 							}
 						}
 					}
@@ -42,7 +40,6 @@ $color-dark-cyan-blue: #373D48;
 
 				.card:hover {
 					transform: scale(1.04);
-					transition-duration: 0.4s;
 				}
 			}
 		}

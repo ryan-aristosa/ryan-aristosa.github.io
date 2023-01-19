@@ -1,5 +1,5 @@
 import ScrollAnimation from 'react-animate-on-scroll';
-import AnchorButton from 'components/landing/AnchorButton';
+import TechStackTag from 'components/landing/TechStackTag';
 import 'styles/landing/Project.scss';
 
 function Project(props) {
@@ -17,21 +17,23 @@ function Project(props) {
 						<div className='tech-stack p-0 mx-0 mb-0 mt-4'>
 							{
 								techStack.map(([stack, bgColor, color]) => (
-									<div
-										className={bgColor + ' ' + color +
-											' d-inline-block py-1 px-3 me-2 mt-2'}
-										key={stack}
-									>
-										{stack}
+									<div className='d-inline-block'>
+										<TechStackTag bgColor={bgColor} color={color} stack={stack} />
 									</div>
 								))
 							}
 						</div>
 					</div>
-					<div className='buttons mt-5 d-flex'>
-						<div className='w-100 pe-2'>
-							<AnchorButton link={openSource} text='Open-source' />
-						</div>
+					<div className='button-container mt-5 w-100 pe-2'>
+						<a
+							href={openSource}
+							rel='noreferrer'
+							target='_blank'
+							className='btn w-100 h-100 d-flex align-items-center 
+									justify-content-center'
+						>
+							Open-source
+						</a>
 					</div>
 				</div>
 			</ScrollAnimation>
