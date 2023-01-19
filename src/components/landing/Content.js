@@ -50,8 +50,7 @@ const PROJECT_OBJ = [
 			['Spring Boot', 'color-spring-boot', 'c-eb'],
 			['Hibernate', 'color-hibernate', 'c-eb']
 		],
-		'https://github.com/ryan-aristosa/books-and-authors',
-		'/authors'
+		'https://github.com/ryan-aristosa/books-and-authors'
 	],
 	[
 		'skill-and-employees',
@@ -60,8 +59,7 @@ const PROJECT_OBJ = [
 			['Java', 'color-java', 'c-eb'],
 			['Spring Boot', 'color-spring-boot', 'c-eb']
 		],
-		'https://github.com/ryan-aristosa/skills-and-employees',
-		'/skills-and-employees'
+		'https://github.com/ryan-aristosa/skills-and-employees'
 	],
 	[
 		'billing',
@@ -70,8 +68,7 @@ const PROJECT_OBJ = [
 			['Java', 'color-java', 'c-eb'],
 			['Spring Boot', 'color-spring-boot', 'c-eb']
 		],
-		'https://github.com/ryan-aristosa/billing',
-		'/billing'
+		'https://github.com/ryan-aristosa/billing'
 	]
 ]
 
