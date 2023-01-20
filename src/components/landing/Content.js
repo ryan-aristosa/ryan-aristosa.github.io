@@ -67,7 +67,7 @@ const PROJECT_OBJ = [
 		'https://github.com/ryan-aristosa/books-and-authors'
 	],
 	[
-		'skill-and-employees',
+		'skills-and-employees',
 		'Spring boot application for skills and employees with authorization and actuator',
 		'Led the development of the application',
 		[
