@@ -3,7 +3,7 @@ import TechStackTag from 'components/landing/TechStackTag';
 import 'styles/landing/Project.scss';
 
 function Project(props) {
-	const PROJECT = props.projectObj.map(([title, detail, techStack, openSource]) => (
+	const PROJECT = props.projectObj.map(([title, detail, contribution, techStack, openSource]) => (
 		<div className='card-container d-flex' key={title}>
 			<ScrollAnimation
 				animateIn='animate__fadeIn'
@@ -14,6 +14,7 @@ function Project(props) {
 					<div>
 						<h6 className='fw-600'>{title}</h6>
 						<p className='p-0 mx-0 mb-0 mt-4'>{detail}</p>
+						<p className='p-0 mx-0 mb-0 mt-3'>Contribution: {contribution}</p>
 						<div className='tech-stack p-0 mx-0 mb-0 mt-4'>
 							{
 								techStack.map(([stack, bgColor, color]) => (
@@ -32,7 +33,7 @@ function Project(props) {
 							className='btn w-100 h-100 d-flex align-items-center 
 									justify-content-center'
 						>
-							Open-source
+							View Open-Source
 						</a>
 					</div>
 				</div>
